@@ -33,6 +33,10 @@ public class HomePage extends Page {
     @FindBy(className = "my-account")
     private WebElement headerRectConnectElement;
 
+    @FindBy(xpath = "//ul[@class='navigation-desktop-menu']")
+    private WebElement headerMenu;
+
+
     private String elementTranslate = "";
     private int connectionPossibilityNumber = 0;
     private int languagePossibilityNumber = 0;
@@ -61,6 +65,7 @@ public class HomePage extends Page {
     }
 
     public void getHeaderElementMaison() {
+        shortUntil(visibilityOf(headerMenu));
         shortUntil(visibilityOf(headerElementMaison));
         elementTranslate = headerElementMaison.getText();
     }

@@ -48,7 +48,7 @@ public class HomeStep implements En {
             homePage.getToFindConnexion();
             homePage.verifyGetConnexionToInt_Website();
             homePage.saveScreenShotPNG();
-            Assert.assertEquals(homePage.verifyServiceLangageAppear(),true);
+            Assert.assertEquals(homePage.verifyGetConnexionToInt_Website(),true);
         });
 
         Then("User should see service header appear", () -> {
